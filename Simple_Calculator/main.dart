@@ -1,7 +1,10 @@
 void main(){
   calculator operation = calculator(12, 23);
    double result = operation.addition();
-   operation.display(result);
+   double result2 = operation.multiplication();
+   double result3 = operation.subtraction();
+   double result4 = operation.divison();
+   operation.display(result2);
    
 
 
