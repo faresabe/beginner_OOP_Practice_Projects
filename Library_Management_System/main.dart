@@ -9,7 +9,15 @@ void main(){
 
   Library library = Library();
 
-  book1.displaybook();
+  library.addbook(book3);
+  library.addbook(book2);
+  library.addbook(book1);
+
+  library.registermember(memeber3);
+  library.registermember(memeber2);
+  library.registermember(memeber1);
+
+  library.showallbook();
 
 
 }
@@ -20,6 +28,11 @@ class Book{
   bool? is_available;
 
   Book(this.title,this.author,this.is_available);
+ @override
+String toString() {
+  return "${title ?? "Unknown Title"} by ${author ?? "Unknown Author"}";
+}
+
 
   void displaybook(){
     print("title: $title");
@@ -85,7 +98,7 @@ class Library{
 
    }
    void showallbook(){
-    for (List book in books){
+    for (Book book in books){
        print(book);
     }
    }
